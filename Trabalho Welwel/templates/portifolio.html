@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>André Guedes's Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #002f6c; /* Dark blue background */
+            color: #ffffff; /* White text color */
+        }
+
+        header {
+            background-color: #003366; /* Darker blue */
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background-color: #004080; /* Medium blue */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #a0d8ef; /* Light blue on hover */
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            border: 4px solid #a0d8ef; /* Light blue border */
+        }
+
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #a0d8ef; /* Light blue */
+        }
+
+        .about,.skills, .experience, .courses, .contact {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #003366; /* Darker blue background */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative; /* Needed for absolute positioning of profile-pic */
+        }
+
+        .projects img {
+            width: 20%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .skills ul, .experience ul, .courses ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills li, .experience li, .courses li {
+            background-color: #004080; /* Medium blue */
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #003366; /* Darker blue */
+            color: #ffffff;
+        }
+
+        /* Contact Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #003366;
+            background-color: #004080; /* Medium blue */
+            color: #ffffff;
+        }
+
+        input[type="submit"] {
+            background-color: #a0d8ef; /* Light blue */
+            color: #003366;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #8fc2d2; /* Slightly darker light blue */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>André Guedes</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="about">
+            <h2 class="section-title">About Me</h2>
+            <p><strong>André Guedes</strong></p>
+            <p>Customer Support | Data Analysis | Computer Science | Power BI | English | Office Suite</p>
+            <p>Hello, I'm André, a technology enthusiast currently working in Customer Support at John Deere and studying Computer Science at Unimax. My journey in the tech field has been driven by a passion for innovation and a commitment to excellence.</p>
+            <p>At 24 years old, My educational background includes a focus on programming and data architecture, which complements my current role and future career aspirations.</p>
+            <p>In addition to my professional work, I have pursued various courses in Power BI, English, and Office Suite, which have equipped me with essential skills for data analysis and effective communication.</p>
+            <p>I am passionate about leveraging my skills to drive impactful results and am always looking for new opportunities to grow and contribute in the tech industry.</p>
+        </section>
+
+
+        <section id="skills" class="skills">
+            <h2 class="section-title">Skills</h2>
+            <ul>
+                <li>Customer Support</li>
+                <li>Data Analysis</li>
+                <li>Power BI</li>
+                <li>Python</li>
+                <li>MySQL</li>
+                <li>Data Architecture</li>
+                <li>Programming</li>
+                <li>Computer Science</li>
+                <li>Office Suite</li>
+            </ul>
+        </section>
+
+        <section id="experience" class="experience">
+            <h2 class="section-title">Experience</h2>
+            <ul>
+                <li>Intern at John Deere | 1 months</li>   
+            </ul>
+        </section>
+
+        <section id="courses" class="courses">
+            <h2 class="section-title">Courses</h2>
+            <ul>
+                <li>Power BI</li>
+                <li>English - People</li>
+                <li>Digital Marketing - RD University</li>
+                <li>CRM - RD Station</li>
+                <li>Data Science - DIO</li>
+                <li>Python - DIO</li>
+                <!-- Add more courses as needed -->
+            </ul>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title">Contact</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <input type="submit" value="Send">
